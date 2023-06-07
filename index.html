@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">Student registration form</h3>
+
+                  <!-- Registration Form -->
+                  <form method="POST" action="/registration">
+                    <!-- Add a hidden field to store the registration ID -->
+                    <input type="hidden" id="registrationId" name="registrationId" value="" />
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="form3Example1m" class="form-control form-control-lg" name="firstName" />
+                          <label class="form-label" for="form3Example1m">First name</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="form3Example1n" class="form-control form-control-lg" name="lastName" />
+                          <label class="form-label" for="form3Example1n">Last name</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Add update and delete buttons -->
+                    <div class="d-flex justify-content-end mb-4">
+                      <button type="button" id="updateBtn" class="btn btn-primary me-2" onclick="updateRegistration()">Update</button>
+                      <button type="button" id="deleteBtn" class="btn btn-danger" onclick="deleteRegistration()">Delete</button>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="form3Example1m1" class="form-control form-control-lg" name="mothersName" />
+                          <label class="form-label" for="form3Example1m1">Mother's name</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="fathersName" />
+                          <label class="form-label" for="form3Example1n1">Father's name</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" name="address" />
+                        <label class="form-label" for="form3Example8">Address</label>
+                      </div>
+  
+                      <!-- Rest of the form elements... -->
+  
+                      <div class="d-flex justify-content-end pt-3">
+                        <button type="reset" class="btn btn-light btn-lg">Reset all</button>
+                        <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                      </div>
+                    </form>
+  
+                    <script>
+                      // Function to handle the update button click event
+                      function updateRegistration() {
+                        // Get the registration ID from the hidden field
+                        const registrationId = document.getElementById('registrationId').value;
+                        
+                        // Redirect to the update page with the registration ID
+                        window.location.href = '/update/' + registrationId;
+                      }
+  
+                      // Function to handle the delete button click event
+                      function deleteRegistration() {
+                        // Get the registration ID from the hidden field
+                        const registrationId = document.getElementById('registrationId').value;
+                        
+                        // Redirect to the delete page with the registration ID
+                        window.location.href = '/delete/' + registrationId;
+                      }
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  </html>
+  
