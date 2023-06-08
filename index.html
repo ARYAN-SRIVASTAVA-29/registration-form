@@ -40,11 +40,7 @@
                       </div>
                     </div>
 
-                    <!-- Add update and delete buttons -->
-                    <div class="d-flex justify-content-end mb-4">
-                      <button type="button" id="updateBtn" class="btn btn-primary me-2" onclick="updateRegistration()">Update</button>
-                      <button type="button" id="deleteBtn" class="btn btn-danger" onclick="deleteRegistration()">Delete</button>
-                    </div>
+                  
 
                     <div class="row">
                       <div class="col-md-6 mb-4">
@@ -65,8 +61,65 @@
                         <input type="text" id="form3Example8" class="form-control form-control-lg" name="address" />
                         <label class="form-label" for="form3Example8">Address</label>
                       </div>
+  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                        <h6 class="mb-0 me-4">Gender: </h6>
+                        <div class="form-check form-check-inline mb-0 me-4">
+                          <input class="form-check-input" type="radio" name="gender" id="femaleGender" value="Female" />
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                      </div>
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" name="gender" id="maleGender" value="Male" />
+                        <label class="form-check-label" for="maleGender">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline mb-0">
+                        <input class="form-check-input" type="radio" name="gender" id="otherGender" value="Other" />
+                        <label class="form-check-label" for="otherGender">Other</label>
+                      </div>
+                    </div>
   
-                      <!-- Rest of the form elements... -->
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <select class="select" name="state">
+                          <option value="1">State</option>
+                          <option value="2">Uttar Pradesh</option>
+                          <option value="3">Bihar</option>
+                          <option value="4">Rajasthan</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <select class="select" name="city">
+                          <option value="1">City</option>
+                          <option value="2">Lucknow</option>
+                          <option value="3">Patna</option>
+                          <option value="4">Jaipur</option>
+                        </select>
+                      </div>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="text" id="form3Example9" class="form-control form-control-lg" name="dob" />
+                      <label class="form-label" for="form3Example9">DOB</label>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="text" id="form3Example90" class="form-control form-control-lg" name="pincode" />
+                      <label class="form-label" for="form3Example90">Pincode</label>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="text" id="form3Example99" class="form-control form-control-lg" name="course" />
+                      <label class="form-label" for="form3Example99">Course</label>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="text" id="form3Example97" class="form-control form-control-lg" name="email" />
+                      <label class="form-label" for="form3Example97">Email ID</label>
+                    </div>
+  
+                    <div class="d-flex justify-content-end pt-3">
+                      <button type="reset" class="btn btn-light btn-lg">Reset all</button>
+                      <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                    </div>
   
                       <div class="d-flex justify-content-end pt-3">
                         <button type="reset" class="btn btn-light btn-lg">Reset all</button>
